@@ -1,0 +1,161 @@
+
+@mixin textTemplate() {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: top;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  background-color: transparent;
+  color: #b7b7b8;
+  border: none;
+  box-shadow: none;
+  letter-spacing: 0.05rem;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+@mixin linkTemplate() {
+  color: #b7b7b8;
+  text-decoration: none;
+}
+$colorW:#ffffff;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* makes 1 rem mean 10 pixels, instead of 14 */
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: $colorW;
+  outline: none;
+  border: 0;
+}
+
+div, input, button, select, h1, h2, h3, h4, h5, h6 {
+  @include textTemplate();
+}
+
+* a:link {
+  @include linkTemplate;
+}
+
+* a:visited {
+  @include linkTemplate;
+}
+
+.content-area {
+  padding: 0 15px;
+}
+
+.swiper {
+  position: relative;
+
+  h2 {
+    color: $colorW;
+    font-size: 2.2rem;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    display: none;
+    color: $colorW;
+    font-size: 1.9rem;
+    letter-spacing: 0.08rem;
+  }
+
+  button {
+    display: block;
+    border: 2px solid $colorW;
+    margin: auto;
+    margin-top: 14px;
+    padding: 12px 21px;
+    background-color: transparent;
+    color: $colorW;
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+  }
+}
+
+.swiper img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.swiper-caption {
+  position: absolute;
+  padding: 10px;
+  left: 20px;
+  right: 20px;
+  top: 48%;
+  transform: translateY(-52%);
+}
+
+.showcase {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+.showcase-block {
+  display: none;
+  position: relative;
+  width: 100%;
+
+  img {
+    display: block;
+    width: 100%
+  }
+
+  h3 {
+    color: $colorW;
+    text-align: left;
+    font-weight: normal;
+    font-size: 2rem;
+  }
+
+  h4 {
+    position: absolute;
+    text-align: left;
+    color: $colorW;
+    font-weight: normal;
+  }
+
+  button {
+    display: block;
+    margin: 20px 4px 24px 4px;
+    border: 2px solid $colorW;
+    padding: 9px 24px;
+    color: $colorW;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
+
+.showcase-active {
+  display: initial
+}
+
+.showcase-content {
+  position: absolute;
+  top: 25%;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.page-heading {
+  margin: 30px 0;
+  margin-top: 76px;
+  font-size: 1.9rem;
+  font-weight: bolder;
+  letter-spacing: 0.04em;
+  color: #04293f;
+}
