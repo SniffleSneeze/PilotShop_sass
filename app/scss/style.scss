@@ -1,4 +1,6 @@
-body {
-  background: red;
-  font-size: 10px;
-}
+@import 'header';
+@import 'body';
+@import 'product';
+@import 'media';
+
+
